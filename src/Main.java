@@ -2,18 +2,13 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // on crée des objets (sans les stocker inutilement)
-        new Personne();
-        new Personne();
-        new Personne();
-
-        // on crée une 4ème personne qu'on utilise pour affichage
+        // création de plusieurs objets Personne
+        Personne personne1 = new Personne();
+        Personne personne2 = new Personne();
+        Personne personne3 = new Personne();
         Personne personne4 = new Personne();
 
-        // affichage du compteur local (toujours 1)
-        System.out.println("Compteur local = " + personne4.nbLocal);
-
-        // affichage du compteur global (total des objets créés)
-        System.out.println("Compteur global = " + Personne.nbInstances);
+        // affichage des compteurs
+        System.out.println("(" + personne4.nbLocal + "," + Personne.nbInstances + ")");
     }
 }
